@@ -1,0 +1,37 @@
+h1. Rails hello world for Cloud Foundry
+
+Using mysql
+
+h1. Deploy Command
+
+<pre><code class="shell">
+% vmc push rails-cf --runtime ruby19
+Would you like to deploy from the current directory? [Yn]: 
+Application Deployed URL [rails-cf.vcap.me]: 
+Detected a Rails Application, is this correct? [Yn]: 
+Memory reservation (128M, 256M, 512M, 1G, 2G) [256M]: 
+How many instances? [1]: 
+Bind existing services to 'rails-cf'? [yN]: 
+Create services to bind to 'rails-cf'? [yN]: y
+1: memcached
+2: mongodb
+3: mysql
+4: postgresql
+5: redis
+What kind of service?: 3
+Specify the name of the service [mysql-b8733]: 
+Create another? [yN]: 
+Would you like to save this configuration? [yN]: y
+Manifest written to manifest.yml.
+Creating Application: OK
+Creating Service [mysql-b8733]: OK
+Binding Service [mysql-b8733]: OK
+Uploading Application:
+  Checking for available resources: OK
+  Processing resources: OK
+  Packing application: OK
+  Uploading (5K): OK   
+Push Status: OK
+Staging Application 'rails-cf': OK                                              
+Starting Application 'rails-cf': OK
+</code></pre>
