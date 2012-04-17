@@ -1,0 +1,16 @@
+--- 
+applications: 
+  .: 
+    name: rails-cf
+    url: ${name}.${target-base}
+    framework: 
+      name: rails3
+      info: 
+        mem: 256M
+        description: Rails Application
+        exec: 
+    mem: 256M
+    instances: 1
+    services: 
+      mysql-b8733: 
+        type: mysql
